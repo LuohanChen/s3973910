@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        
+        <title>Signs of the Future</title>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.1/buzz.min.js"></script>
+        <style>
+
+            body {
+                background-color: black;
+            }
+            .row{
+                margin-top:2%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .left-column{
+                float:left;
+                width:30%;
+                margin-left: 15%;
+            }
+            .center-column{
+                width:20%;
+                margin:auto;
+            }
+            .right-column{
+                float:right;
+                width:30%;
+                margin:auto;
+            }
+            .image-container{
+                display: table-cell;
+                vertical-align: middle;
+                margin: auto;
+            }
+
+            
+        </style>
+    </head>
+
+    <body>
+
+        <div class="row">
+            <div class="left-column"><div class="image-container"><img id="icon1" src="img/vr.png" height="300" width="300"/></div></div>
+            <div class="right-column"><div class="image-container"><img id="icon2" src="img/drone.png" height="300" width="300"/></div></div>
+            <div class="center-column"><div class="image-container"><img id="icon3" src="img/cctv.png" height="300" width="300"/></div></div>
+        </div>
+
+        <div class="row">
+            <div class="left-column"><div class="image-container"><img id="icon4" src="img/neural.png" height="300" width="300"/></div></div>
+            <div class="right-column"><div class="image-container"><img id="icon5" src="img/spaceport.png" height="300" width="300"/></div></div>
+            <div class="center-column"><div class="image-container"><img id="icon6" src="img/hoverlimit.png" height="300" width="300"/></div></div>
+        </div>
+
+        <div class="row">
+            <div class="left-column"><div class="image-container"><img id="icon7" src="img/robot.png" height="300" width="300"/></div></div>
+            <div class="right-column"><div class="image-container"><img id="icon8" src="img/teleporter.png" height="300" width="300"/></div></div>
+            <div class="center-column"><div class="image-container"><img id="icon9" src="img/traincross.png" height="300" width="300"/></div></div>
+        </div>
+
+        <script>
+            const vrsound = new buzz.sound("sounds/night-vision.wav");
+            const dronesound = new buzz.sound("sounds/Helicopter.wav");
+            const cctvsound = new buzz.sound("sounds/buzz.wav");
+            const neuralsound = new buzz.sound("sounds/retro-error.wav");
+            const spaceportsound = new buzz.sound("sounds/rocket.wav");
+            const hoversound = new buzz.sound("sounds/hover.wav");
+            const robotsound = new buzz.sound("sounds/busy-room.wav");
+            const teleportsound = new buzz.sound("sounds/teleport.mp3");
+            const railwaysound = new buzz.sound("sounds/railway_crossing.wav");
+
+                document.getElementById('icon1').onmouseover = () => vrsound.play ();
+                document.getElementById('icon2').onmouseover = () => dronesound.play();
+                document.getElementById('icon3').onmouseover = () => cctvsound.play();
+                document.getElementById('icon4').onmouseover = () => neuralsound.play();
+                document.getElementById('icon5').onmouseover = () => spaceportsound.play();
+                document.getElementById('icon6').onmouseover = () => hoversound.play();
+                document.getElementById('icon7').onmouseover = () => robotsound.play();
+                document.getElementById('icon8').onmouseover = () => teleportsound.play();
+                document.getElementById('icon9').onmouseover = () => railwaysound.play();
+        </script> 
+
+    </body>
+    
+    
+</html>
