@@ -10,28 +10,24 @@
             body {
                 background-color: black;
             }
-            .row{
-                margin-top:2%;
-                margin-left: auto;
-                margin-right: auto;
+
+            ul {
+                width: 100%;
+   list-style: none;
+   padding: 0;
+   margin: 0;
+   font-size: 0;
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
             }
-            .left-column{
-                float:left;
-                width:30%;
-                margin-left: 10%;
-            }
-            .center-column{
-                width:30%;
-                margin:auto;
-            }
-            .right-column{
-                float:right;
-                margin-right: 10%;
-            }
-            .image-container{
-                display: table-cell;
-                vertical-align: middle;
-                margin: auto;
+
+            li{
+                list-style: none;
+    padding: 10px;
+    margin: 10px auto;
+    position: relative; bottom: 10px;
+    float: left;
             }
 
             
@@ -40,60 +36,60 @@
 
     <body>
 
-        <div class="row">
-            <div class="left-column"><div class="image-container">
+        <ul>
+            <li><div class="left-column"><div class="image-container">
                 <img id="icon1" src="img/swapvr.png" height="300" width="300" 
                 onmouseover= "this.src='img/vr.png';" 
                 onmouseout= "this.src='img/swapvr.png';"/>
-            </div></div>
+            </div></div></li>
 
-            <div class="right-column"><div class="image-container"><img id="icon2" src="img/swapdrone.png" height="300" width="300"
+            <li><div class="right-column"><div class="image-container"><img id="icon2" src="img/swapdrone.png" height="300" width="300"
                 onmouseover= "this.src='img/drone.png';" 
                 onmouseout= "this.src='img/swapdrone.png';"/>
-            </div></div>
+            </div></div></li>
 
-            <div class="center-column"><div class="image-container"><img id="icon3" src="img/swapcctv.png" height="300" width="300"
+            <li><div class="center-column"><div class="image-container"><img id="icon3" src="img/swapcctv.png" height="300" width="300"
                 onmouseover= "this.src='img/cctv.png';" 
                 onmouseout= "this.src='img/swapcctv.png';"/>
-            </div></div>
+            </div></div></li>
 
-        </div>
+        </ul>
 
-        <div class="row">
-            <div class="left-column"><div class="image-container"><img id="icon4" src="img/swapneural.png" height="300" width="300"
+        <ul>
+            <li><div class="left-column"><div class="image-container"><img id="icon4" src="img/swapneural.png" height="300" width="300"
                 onmouseover= "this.src='img/neural.png';" 
                 onmouseout= "this.src='img/swapneural.png';"
-                /></div></div>
+                /></div></div></li>
 
-            <div class="right-column"><div class="image-container"><img id="icon5" src="img/swapspaceport.png" height="300" width="300"
+                <li><div class="right-column"><div class="image-container"><img id="icon5" src="img/swapspaceport.png" height="300" width="300"
                 onmouseover= "this.src='img/spaceport.png';" 
                 onmouseout= "this.src='img/swapspaceport.png';"
-                /></div></div>
+                /></div></div></li>
 
-            <div class="center-column"><div class="image-container"><img id="icon6" src="img/swaphoverlimit.png" height="300" width="300"
+                <li><div class="center-column"><div class="image-container"><img id="icon6" src="img/swaphoverlimit.png" height="300" width="300"
                 onmouseover= "this.src='img/hoverlimit.png';" 
                 onmouseout= "this.src='img/swaphoverlimit.png';"
-                /></div></div>
+                /></div></div></li>
 
-        </div>
+            </ul>
 
-        <div class="row">
-            <div class="left-column"><div class="image-container"><img id="icon7" src="img/swaprobot.png" height="300" width="300"
+        <ul>
+            <li><div class="left-column"><div class="image-container"><img id="icon7" src="img/swaprobot.png" height="300" width="300"
                 onmouseover= "this.src='img/robot.png';" 
                 onmouseout= "this.src='img/swaprobot.png';"
-                /></div></div>
+                /></div></div></li>
 
-            <div class="right-column"><div class="image-container"><img id="icon8" src="img/swapTeleporter.png" height="300" width="300"
+            <li><div class="right-column"><div class="image-container"><img id="icon8" src="img/swapTeleporter.png" height="300" width="300"
                 onmouseover= "this.src='img/teleporter.png';" 
                 onmouseout= "this.src='img/swapTeleporter.png';"
-                /></div></div>
+                /></div></div></li>
 
-            <div class="center-column"><div class="image-container"><img id="icon9" src="img/swaptraincross.png" height="300" width="300"
+            <li><div class="center-column"><div class="image-container"><img id="icon9" src="img/swaptraincross.png" height="300" width="300"
                 onmouseover= "this.src='img/traincross.png';" 
                 onmouseout= "this.src='img/swaptraincross.png';"
-                /></div></div>
+                /></div></div></li>
 
-        </div>
+            </ul>
 
         <script>
             const vrsound = new buzz.sound("sounds/night-vision.wav");
