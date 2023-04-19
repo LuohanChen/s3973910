@@ -10,6 +10,17 @@
             body {
                 background-color: black;
             }
+  .figure img.image-hover {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    left: 10px;
+    bottom: 10px;
+    opacity: 0;
+  }
+  .figure:hover img.image-hover {
+    opacity: 1;
+  }
 
             ul {
                 width: 100%;
@@ -29,65 +40,64 @@
     position: relative; bottom: 10px;
     float: left;
             }
-
             
         </style>
     </head>
 
     <body>
 
+
         <ul>
-            <li><div class="left-column"><div class="image-container">
-                <img id="icon1" src="img/swapvr.png" height="300" width="300" 
-                onmouseover= "this.src='img/vr.png';" 
-                onmouseout= "this.src='img/swapvr.png';"/>
-            </div></div></li>
+            <li><div class="figure">
+                <img class="image-main" src="img/swapvr.png" height="300" width="300">
+                <img id ="icon1" class="image-hover" src="img/vr.png" height="300" width="300">
+              </div></li>
 
-            <li><div class="right-column"><div class="image-container"><img id="icon2" src="img/swapdrone.png" height="300" width="300"
-                onmouseover= "this.src='img/drone.png';" 
-                onmouseout= "this.src='img/swapdrone.png';"/>
-            </div></div></li>
+            <li><div class="figure">
+                <img class="image-main" src="img/swapdrone.png" height="300" width="300">
+                <img id ="icon2" class="image-hover" src="img/drone.png" height="300" width="300">
+              </div></li>
 
-            <li><div class="center-column"><div class="image-container"><img id="icon3" src="img/swapcctv.png" height="300" width="300"
-                onmouseover= "this.src='img/cctv.png';" 
-                onmouseout= "this.src='img/swapcctv.png';"/>
-            </div></div></li>
+            <li><div class="figure">
+                <img class="image-main" src="img/swapcctv.png" height="300" width="300">
+                <img id ="icon3" class="image-hover" src="img/cctv.png" height="300" width="300">
+              </div></li>
 
         </ul>
 
         <ul>
-            <li><div class="left-column"><div class="image-container"><img id="icon4" src="img/swapneural.png" height="300" width="300"
-                onmouseover= "this.src='img/neural.png';" 
-                onmouseout= "this.src='img/swapneural.png';"
-                /></div></div></li>
+            <li><div class="figure">
+                <img class="image-main" src="img/swapneural.png" height="300" width="300">
+                <img id ="icon4" class="image-hover" src="img/neural.png" height="300" width="300">
+              </div></li>
 
-                <li><div class="right-column"><div class="image-container"><img id="icon5" src="img/swapspaceport.png" height="300" width="300"
-                onmouseover= "this.src='img/spaceport.png';" 
-                onmouseout= "this.src='img/swapspaceport.png';"
-                /></div></div></li>
+                <li><div class="figure">
+                    <img class="image-main" src="img/swapspaceport.png" height="300" width="300">
+                    <img id ="icon5" class="image-hover" src="img/spaceport.png" height="300" width="300">
+                  </div></li>
 
-                <li><div class="center-column"><div class="image-container"><img id="icon6" src="img/swaphoverlimit.png" height="300" width="300"
-                onmouseover= "this.src='img/hoverlimit.png';" 
-                onmouseout= "this.src='img/swaphoverlimit.png';"
-                /></div></div></li>
+                <li><div class="figure">
+                    <img class="image-main" src="img/swaphoverlimit.png" height="300" width="300">
+                    <img id ="icon6" class="image-hover" src="img/hoverlimit.png" height="300" width="300">
+                  </div></li>
 
             </ul>
 
         <ul>
-            <li><div class="left-column"><div class="image-container"><img id="icon7" src="img/swaprobot.png" height="300" width="300"
-                onmouseover= "this.src='img/robot.png';" 
-                onmouseout= "this.src='img/swaprobot.png';"
-                /></div></div></li>
+            <li><div class="figure">
+                <img class="image-main" src="img/swaprobot.png" height="300" width="300">
+                <img id ="icon7" class="image-hover" src="img/robot.png" height="300" width="300">
+              </div></li>
 
-            <li><div class="right-column"><div class="image-container"><img id="icon8" src="img/swapTeleporter.png" height="300" width="300"
-                onmouseover= "this.src='img/teleporter.png';" 
-                onmouseout= "this.src='img/swapTeleporter.png';"
-                /></div></div></li>
+            <li><div class="figure">
+                <img class="image-main" src="img/swapTeleporter.png" height="300" width="300">
+                <img id ="icon8" class="image-hover" src="img/teleporter.png" height="300" width="300">
+              </div></li>
 
-            <li><div class="center-column"><div class="image-container"><img id="icon9" src="img/swaptraincross.png" height="300" width="300"
-                onmouseover= "this.src='img/traincross.png';" 
-                onmouseout= "this.src='img/swaptraincross.png';"
-                /></div></div></li>
+            <li><div class="figure">
+                <img class="image-main" src="img/swaptraincross.png" height="300" width="300">
+                <img id ="icon9" class="image-hover" src="img/traincross.png" height="300" width="300">
+              </div></li>
 
             </ul>
 
@@ -102,15 +112,15 @@
             const teleportsound = new buzz.sound("sounds/teleport.mp3");
             const railwaysound = new buzz.sound("sounds/railway_crossing.wav");
 
-                document.getElementById('icon1').onmousedown = () => vrsound.play ();
-                document.getElementById('icon2').onmousedown = () => dronesound.play();
-                document.getElementById('icon3').onmousedown = () => cctvsound.play();
-                document.getElementById('icon4').onmousedown = () => neuralsound.play();
-                document.getElementById('icon5').onmousedown = () => spaceportsound.play();
-                document.getElementById('icon6').onmousedown = () => hoversound.play();
-                document.getElementById('icon7').onmousedown = () => robotsound.play();
-                document.getElementById('icon8').onmousedown = () => teleportsound.play();
-                document.getElementById('icon9').onmousedown = () => railwaysound.play();
+                document.getElementById('icon1').onmouseover = () => vrsound.play ();
+                document.getElementById('icon2').onmouseover = () => dronesound.play();
+                document.getElementById('icon3').onmouseover = () => cctvsound.play();
+                document.getElementById('icon4').onmouseover = () => neuralsound.play();
+                document.getElementById('icon5').onmouseover = () => spaceportsound.play();
+                document.getElementById('icon6').onmouseover = () => hoversound.play();
+                document.getElementById('icon7').onmouseover = () => robotsound.play();
+                document.getElementById('icon8').onmouseover = () => teleportsound.play();
+                document.getElementById('icon9').onmouseover = () => railwaysound.play();
         </script> 
 
     </body>
